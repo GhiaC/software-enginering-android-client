@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:layout_weight="10"
+    android:id="@+id/Person_content"
+    >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:id="@+id/divProfilePic"
+        >
+
+        <me.ghiasi.soft.tools.CircularImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ProfilePic_showProfiles_ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="2dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/ProfName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Empty"
+        android:layout_toEndOf="@+id/divProfilePic"
+        android:textSize="20sp"/>
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_toEndOf="@+id/divProfilePic"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:layout_below="@id/ProfName"
+        android:id="@+id/ratingBar"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyProject</string>
+    <string name="Empty">Empty</string>
+    <string name="errLoadPic">error in load pic</string>
+</resources>

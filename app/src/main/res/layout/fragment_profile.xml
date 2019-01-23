@@ -1,0 +1,138 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="biz.poolsaz.MyProject"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <me.ghiasi.soft.tools.GifImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/loadingProfilePic"
+            />
+
+        <me.ghiasi.soft.tools.CircularImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ProfilePic_ImageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="2dp" />
+
+
+        <TextView
+            android:id="@+id/NameProfile_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ProfilePic_ImageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            android:textSize="@dimen/font_size_text" />
+
+        <RatingBar
+            android:id="@+id/UserRate_RatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/NameProfile_TextView"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/UserCategory_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/UserRate_RatingBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="TextView" />
+
+
+        <LinearLayout
+            android:id="@+id/TimeWork"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/UserCategory_TextView"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="From"
+                android:textAlignment="center" />
+
+            <TextClock
+                android:id="@+id/textClock1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:id="@+id/TimeWork_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="To"
+                android:textAlignment="center" />
+
+            <TextClock
+                android:id="@+id/textClock2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:textAlignment="textStart" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/Descrption_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TimeWork"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="TextView" />
+
+
+        <com.daimajia.slider.library.SliderLayout
+            android:id="@+id/custom_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/Descrption_TextView"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/PhoneNume_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/custom_indicator"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            android:textSize="@dimen/font_size_text" />
+
+        <Button
+            android:id="@+id/call"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PhoneNume_TextView"
+            android:layout_centerHorizontal="true"
+            android:text="Call" />
+    </RelativeLayout>
+</ScrollView>

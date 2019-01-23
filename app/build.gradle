@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId "biz.poolsaz.myproject"
+        minSdkVersion 23
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    testCompile 'junit:junit:4.12'
+
+    compile 'com.android.support:design:23.3.0' // Used
+
+//    compile 'de.hdodenhof:circleimageview:2.1.0' // Used
+
+    compile "com.android.support:support-v4" // Used
+    compile 'com.squareup.picasso:picasso:2.3.2' // ????
+    compile 'com.nineoldandroids:library:2.4.0'//????
+    compile 'com.daimajia.slider:library:1.1.5@aar' // Used
+
+//    compile 'me.grantland:autofittextview:0.2.+'
+
+    compile 'com.oguzdev:CircularFloatingActionMenu:1.0.2' // no used
+    compile 'com.github.szugyi:Android-CircleMenu:2.0.0' // Used
+
+
+    // recycler View
+    compile 'com.github.kanytu:android-parallax-recyclerview:v1.7'
+    compile 'com.github.ybq:Endless-RecyclerView:1.0.3'
+    compile 'com.android.support:recyclerview-v7:23.3.0' //Used
+//    compile 'jp.wasabeef:recyclerview-animators:2.2.7'
+    compile 'com.github.gabrielemariotti.recyclerview:recyclerview-animators:0.3.0-SNAPSHOT@aar'
+
+    //
+    compile 'com.felipecsl:gifimageview:2.1.0' //Loading
+    compile 'com.google.maps.android:android-maps-utils:0.5+' // sp location in profile fragment
+
+}
